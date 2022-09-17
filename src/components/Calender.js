@@ -12,9 +12,10 @@ function Calender() {
   var API_KEY = "AIzaSyCIk4K_soLvpGZxfpWAD2ZJl5RxVL699xc"
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
   var SCOPES = "https://www.googleapis.com/auth/calendar.events"
+  // var SCOPES = "https://www.googleapis.com/auth/drive.metadata.readonly";
 
   const handleClick = () => {
-    console.log(gapi);
+    
     
     gapi.load('client:auth2', () => {
       console.log('loaded client')
