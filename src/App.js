@@ -15,6 +15,7 @@
 import {useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route, BrowserRouter } from 'react-router-dom';
 import Admin from './components/Admin';
+import Calender from './components/Calender';
 // import {AuthProvider, AuthContext} from './context/AuthContext'
 // import PrivateRoute from './components/PrivateRoute';
 // import Profile from './components/Profile';
@@ -36,7 +37,8 @@ function App() {
     //   {/* </AuthProvider> */}
      
     // </Router>
-    <Admin/>
+    // <Admin/>
+    <Calender/>
     
 
   );
