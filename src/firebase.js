@@ -3,7 +3,7 @@ import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth';
 import 'firebase/compat/storage';
 import 'firebase/compat/firestore'; 
-
+import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,13 +17,14 @@ const firebaseConfig = {
 
 
 export const app = firebase.initializeApp(firebaseConfig);
-export const auth = firebase.auth();
+// export const auth = firebase.auth();
 
-const firestore = firebase.firestore();
+// const firestore = firebase.firestore();
+export const db= getFirestore(app);
 
-export const databse = {
-   admin: firestore.collection('admin'),
-   users : firestore.collection('users'),
-}
+// export const database = {
+//    admin: firestore.collection('admin'),
+//   //  users : firestore.collection('users'),
+// }
 
-export const storage =firebase.storage();
+// export const storage =firebase.storage();
