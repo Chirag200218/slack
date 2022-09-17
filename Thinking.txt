@@ -1,1 +1,26 @@
 1. WireFraming - draw rough catch what you are actually going to built.
+2. Functionality
+    * Sign in
+    * Sign up
+    * Create a channel 
+    * Send message in channel
+    * Join a channel
+    * search a channel
+
+3. Data
+    * users
+    * channel
+    * messages
+
+4. UI Components
+    * Sidebar
+        * ListOfChannel
+        * ListOfDirectMessage
+    * MainContainer
+        * Header
+        * message
+        * CreateMessage
+    * SignUp
+    *SignIn
+
+    
