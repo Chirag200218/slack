@@ -11,7 +11,7 @@ function Calender() {
   var CLIENT_ID = "980663998430-rq0f9qbar0s8qlegno9pv7fhh0aq3led.apps.googleusercontent.com"
   var API_KEY = "AIzaSyCIk4K_soLvpGZxfpWAD2ZJl5RxVL699xc"
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
-  var SCOPES = "https://www.googleapis.com/auth/calendar.events"
+  var SCOPES = "https://www.googleapis.com/auth/calendar"
   // var SCOPES = "https://www.googleapis.com/auth/drive.metadata.readonly";
 
   const handleClick = () => {

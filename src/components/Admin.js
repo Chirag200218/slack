@@ -87,7 +87,10 @@ function Admin() {
         let modal = document.getElementById("modal");
         // let wrapper = document.getElementById("wrapper");
         // wrapper.style.filter  = 'blur';
-        modal.style.display = 'block';
+        modal.style.display = 'flex';
+        modal.style.justifyContent= 'space-around';
+        // modal.style.alignItems = 'center';
+        modal.style.flexDirection='column';
     }
     const handleChange = (event)=>{
         console.log("uhfeuohohou");
@@ -141,12 +144,13 @@ function Admin() {
                  <Label> Enter Meeting link for meet
                     <Input type='text'value={link} name='link' onChange={handleChange} />
                  </Label>
-                 <Butn onClick={handleClick}></Butn>
+                 <Butn onClick={handleClick}>Submit</Butn>
                  
             </Modal>
 
             <Schedule>
-                //UI
+             
+             
             </Schedule>
         </Wrapper>
     </>
@@ -167,6 +171,7 @@ const Wrapper = styled.div`
     flex-direction:column;
     justify-content: center;
     align-items: space-between;
+    background-color:#1e293b;
 `;
 
 const CreateBox = styled.button`
@@ -184,12 +189,12 @@ const CreateBox = styled.button`
 const Modal = styled.form`
 position: absolute;
     display:none;
-    top: 10%;
+    top: 5%;
     left: 34%;
     height: 31rem;
     width: 31rem;
     border: 1px solid green;
-    background-color:orange;
+    background-color:#e2e8f0;
 `;
 
 
@@ -198,15 +203,29 @@ const Schedule = styled.div`
     width:100%;
 `;
 
-const Label = styled.div``;
+const Label = styled.div`
+display: block;
+margin-left: 10%;
+font-size: large;
+`;
 const Input = styled.input`
-    display:block;
+display: block;
+height: 70%;
+width: 70%;
+font-size: large;
+    
 `;
 
 const Butn = styled.div`
-    height:10px;
-    width: 70px;
-    background-color: white;
+height: 7%;
+width: 56%;
+background-color: white;
+border: 1px solid black;
+margin-left: 18%;
+border-radius: 12px;
+display:flex;
+justify-content:center;
+align-items:center;
 `;
 
-export default Admin
+export default Admin;
