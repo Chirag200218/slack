@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import { db, storage } from '../firebase'
 import { doc, onSnapshot, collection, query, where,getDocs ,addDocs,updateDoc} from "firebase/firestore";
 
+//hello world
+
  
 function Admin() {
 
@@ -18,14 +20,14 @@ function Admin() {
     const[date,setDate] = useState('');
     const[startTime,setStartTime] = useState('');
     const[endTime,setEndtime] = useState('');
-    const[category,setCategory]  = useState("");
-    const[link,setLink] = useState("");
-    const[title,setTitle] = useState("");
+    const[category,setCategory]  = useState('c1');
+    const[link,setLink] = useState('');
+    const[title,setTitle] = useState('');
 
     const handleClick = (event)=>{
-        // alert(category,event,title);
-        
-         //Set Data
+        if(category===''){
+            return;
+        }
         let obj={
             date:date,
             startTime:startTime,
@@ -39,29 +41,43 @@ function Admin() {
             let data= resp.docs.filter((resp)=>resp.id=='ulP0B66ZtSAf3iwHr59M');
 
             let arr=[];
+
             if('c1'===category){
                 arr = data[0].data().c1;
-                 
                 arr.push(obj);
+                const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
+                console.log(docRef);
+                updateDoc(docRef,{'c1':arr});
             }else if('c2'===category){
                 arr = data[0].data().c2;
+                console.log(data[0].data());
                 arr.push(obj);
+                const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
+                console.log(docRef);
+                updateDoc(docRef,{'c2':arr});
             }else if('c3'===category){
                 arr = data[0].data().c3;
                 arr.push(obj);
+                const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
+                console.log(docRef);
+                updateDoc(docRef,{'c3':arr});
             }else if('c4'===category){
                 arr = data[0].data().c4;
                 arr.push(obj);
+                const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
+                console.log(docRef);
+                updateDoc(docRef,{'c4':arr});
             }else if('c5'===category){
                 arr = data[0].data().c5;
                 arr.push(obj);
+                const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
+                console.log(docRef);
+                updateDoc(docRef,{'c5':arr});
             }
 
             console.log(arr , category);
             
-            const docRef =doc(db,'admin','ulP0B66ZtSAf3iwHr59M');
-            console.log(docRef);
-            updateDoc(docRef,{category:arr});
+            
 
         });
       
