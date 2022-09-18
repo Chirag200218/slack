@@ -1,11 +1,12 @@
 
 import { Button } from '@material-ui/core';
-import { data } from 'cheerio/lib/api/attributes';
+
 import React, { useState } from 'react'
-import { Switch } from 'react-router-dom';
+import { Link, Switch } from 'react-router-dom';
 import styled from 'styled-components'
 import { db, storage } from '../firebase'
 import { doc, onSnapshot, collection, query, where,getDocs ,addDocs,updateDoc} from "firebase/firestore";
+
  
 function Admin() {
 
@@ -115,9 +116,11 @@ function Admin() {
 
         </Header>
         <Wrapper id = 'wrapper'>
+           
             <CreateBox onClick={openModal}>
                 Create Schedule
             </CreateBox>
+            
 
             <Modal id='modal'>
                  <Label> Enter title for meet
@@ -144,7 +147,7 @@ function Admin() {
                  <Label> Enter Meeting link for meet
                     <Input type='text'value={link} name='link' onChange={handleChange} />
                  </Label>
-                 <Butn onClick={handleClick}>Submit</Butn>
+                 <Butn onClick={handleClick} >Submit</Butn>
                  
             </Modal>
 
@@ -152,6 +155,7 @@ function Admin() {
              
              
             </Schedule>
+            <a href={`https://caladrius-techathon-master.vercel.app`} style={{color: 'white'}}>Back</a>
         </Wrapper>
     </>
  
